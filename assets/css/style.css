@@ -1,0 +1,721 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* ======================== */
+/*          ヘッダー         */
+/* ======================== */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #272525;
+    max-width: 100%;
+    height: 13vh;
+}
+@media screen and (max-width:480px) {
+    .header{
+        width: 100%;
+        height: 5vh;
+    }
+}
+
+
+.nav {
+    list-style: none;
+    display: flex;
+    gap: 100px;
+    padding-left: 70px;
+}
+@media screen and (max-width:480px){
+    .nav{
+        gap: 30px;
+        padding-left: 100px;
+    }
+}
+
+
+.nav > li > a {
+    color: white;
+    font-size: 40px;
+    font-family: "Cedarville Cursive", cursive;
+    font-weight: 400;
+    font-style: normal;
+    font-style: italic;
+    text-decoration: none;
+}
+@media screen and (max-width:480px){
+    .nav > li > a{
+        font-size: 15px;
+    }
+}
+
+.header-right {
+    display: flex;
+    gap: 35px;
+    margin-top: 50px;
+    padding-right: 30px;
+}
+@media screen and (max-width:480px){
+    .header-right{
+        gap: 15px;
+        margin-top: 10px;
+        padding-right: 15px;
+    }
+}
+
+.logo1,.logo2 {
+    width: 30px;
+    height: 30px;
+}
+@media screen and (max-width:480px){
+    .logo1,.logo2{
+        width: 20px;
+        height: 20px;
+    }
+}
+/* ======================== */
+/*          メイン           */
+/* ======================== */
+
+
+.container1{
+    height: 800px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    background-color: #251818;
+    
+}
+@media screen and (max-width:480px){
+    .container1{
+        height: 300px;
+    }
+}
+
+/* #slideshow {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 1000px;
+    position: absolute;
+}
+@media screen and (max-width:480px){
+    #slideshow{
+        max-width: 400px;
+    }
+}
+
+.slide {
+    display: none;
+    max-width: 100%;
+    height: auto;
+     
+}
+
+/* ここから */
+
+
+/* .img-frame {
+    width: 100%;
+    height: 100%;
+    position: absolute; 
+    top: 50%; 
+    left: 50%; 
+    transform: translate(-50%, -50%); 
+    overflow: hidden; 
+} */
+
+
+/* @media screen and (max-width: 767px) {
+    .img-frame {
+        width: 80%;
+    }
+}  */
+
+.img-frame {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+.img-01, .img-02, .img-03, .img-04 {
+    position:absolute;
+    width: 64%;
+    height: 80%;
+    background-size: cover;
+    /* background-position:50px, 100px; */
+    background-position: center;
+    background-repeat: no-repeat;
+}
+@media screen and (max-width:480px){
+    .img-01, .img-02, .img-03, .img-04{
+    width: 100%;
+    height: 100%;
+}
+}
+
+
+.img-01 {
+    background-image: url("../img/header2.JPG");
+    animation: slide-animation-01 24s infinite;
+}
+
+.img-02 {
+    background-image: url("../img/header1.JPG");
+    animation: slide-animation-02 24s infinite;
+}
+
+.img-03 {
+    background-image: url("../img/header3.JPG");
+    animation: slide-animation-03 24s infinite;
+}
+
+.img-04 {
+    background-image: url("../img/header4.JPG"); /* 画像のパスを追加 */
+    animation: slide-animation-04 24s infinite; /* 新しいアニメーションを追加 */
+}
+
+@keyframes slide-animation-01 {
+    0% {opacity: 1;}
+    30% {opacity: 1;}
+    40% {opacity: 0;}
+    90% {opacity: 0}
+    100% {opacity: 1;}
+    
+}
+
+@keyframes slide-animation-02 {
+    0% {opacity: 0;}
+    30% {opacity: 0;}
+    40% {opacity: 1;}
+    60% {opacity: 1;}
+    70% {opacity: 0;}
+    100% {opacity: 0;}
+}
+
+@keyframes slide-animation-03 {
+    0% {opacity: 0;}
+    60% {opacity: 0;}
+    70% {opacity: 1;}
+    90% {opacity: 1;}
+    100% {opacity: 0;}
+}
+
+@keyframes slide-animation-04 {
+    0% {opacity: 0;} /* アニメーションの初期状態 */
+    30% {opacity: 0;} /* 画像が表示されない部分 */
+    40% {opacity: 1;} /* 画像が表示される部分 */
+    60% {opacity: 1;} /* 画像が表示されたまま */
+    70% {opacity: 0;} /* 画像が消えていく部分 */
+    100% {opacity: 0;} /* アニメーションの終了状態 */
+}
+
+.comment1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 40px;
+    font-family: "Cedarville Cursive", cursive;
+    font-weight: 400;
+    font-style: normal;
+    font-style: italic;
+    text-decoration: none;
+    position: absolute;
+    top:75%;
+    left: 20px;
+}
+@media screen and (max-width:480px){
+    .comment1{
+        font-size: 20px;
+        top: 80%;
+    }
+}
+
+.container2 {
+    height: 130vh;
+    background-color: #272525;
+    display: flex;
+    flex-direction: start;
+    /* align-items: center; */
+    position: relative;
+}
+@media screen and (max-width:480px){
+    .container2{
+        height: 70vh;
+        padding-top: 50px;
+        flex-direction: column-reverse;
+        justify-content: start;
+    }
+}
+
+
+.concept {
+    color: white;
+    font-size: 50px;
+    font-family: "Cedarville Cursive", cursive;
+    font-weight: 400;
+    font-style: normal;
+    font-style: italic;
+    text-decoration: none;
+    position: absolute;
+    top: 25px;
+    left: 30px;
+}
+@media screen and (max-width:480px){
+    .concept{
+        font-size: 30px;
+        top: 7px;
+        left: 15px;
+    }
+}
+
+#section-left{
+    width: 50%;
+    background-color: #272525;
+}
+@media screen and (max-width:480px){
+    #section-left{
+        width: 100%;
+        height: 35%;
+    }
+}
+
+.box-top{
+    width: 100%;
+    height: 50%;
+}
+@media screen and (max-width:480px){
+    .box-top{
+        height: 70%;
+    }
+}
+
+.box-top-img{
+    width: 70%;
+    margin-top: 155px;
+    margin-left: 106px;
+}
+@media screen and (max-width:480px){
+    .box-top-img{
+        width: 60%;
+        margin-top: 4%;
+        margin-left: 84px;
+    }
+}
+
+.box-bottom{
+    width: 100%;
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+@media screen and (max-width:480px){
+    .box-bottom{
+        width: 100%;
+        height: 70%;
+    }
+}
+
+.left{
+    width: 100%;
+    height: 100%;
+}
+@media screen and (max-width:480px){
+    .left{
+        height: 30%;
+    }
+}
+
+.left-img{
+    width: 80%;
+    margin: 20%;
+}
+@media screen and (max-width:480px){
+    .left-img{
+        width: 60%;
+        margin-top: 10%;
+        margin-left: 22%;
+    }
+}
+
+.right{
+    width: 100%;
+    height: 100%;
+}
+@media screen and (max-width:480px){
+    .right{
+        height: 10%;
+    }
+}
+
+.right-img{
+    width: 80%;
+    margin-top: 40%;
+    margin-left: 20%;
+}
+@media screen and (max-width:480px){
+    .right-img{
+        margin-top: 16%;
+        margin-left: 3%;
+    }
+}
+
+#section-right{
+    text-align: center;
+    width: 30%;
+    margin-left: 10%;
+}
+@media screen and (max-width:480px){
+    #section-right{
+        text-align: center;
+        width: 80%;
+
+    }
+}
+
+/* #section-right-top{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 600px;
+    
+} */
+
+.comment2{
+    color: white;
+    margin-top: 40%;
+    font-family: "Kaisei HarunoUmi", serif;
+    font-weight: 800px;
+    font-style: normal;
+    font-size: 40px;
+}
+@media screen and (max-width:480px){
+    .comment2{
+        margin-top: 10px;
+        font-size: 10px;
+    }
+}
+
+ .comment3{
+    color: white;
+    text-align: left;
+    font-family: "Kaisei HarunoUmi", serif;
+    font-weight: 500;
+    font-style: normal;
+    /* font-size: px; */
+    line-height: 2.5;
+ }
+ @media screen and (max-width:480px){
+    .comment3{
+        font-size: 10px;
+        text-align: center;
+        line-height: 1.6;
+    }
+ }
+ 
+
+#cocktail{
+    background-color: #251818;
+    width: 100%;
+    height: 150vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+@media screen and (max-width:480px){
+    #cocktail{height: 80vh;}
+}
+
+.Cocktail{
+    color: white;
+    font-size: 50px;
+    font-family: "Cedarville Cursive", cursive;
+    font-weight: 400;
+    font-style: normal;
+    font-style: italic;
+    text-decoration: none;
+    position: absolute;
+    top: 25px;
+    left: 30px;
+}
+@media screen and (max-width:480px){
+    .Cocktail{
+        font-size: 30px;
+        top: 7px;
+        left: 15px;
+    }
+}
+
+/*==================================================
+スライダーのためのcss
+===================================*/
+.slider {/*横幅94%で左右に余白を持たせて中央寄せ*/
+    width:94%;
+    margin-top: 170px;
+}
+@media screen and (max-width:480px){
+    .slider{
+        margin-top: -270px;
+    }
+}
+
+
+.slider img {
+    width:30vw;/*スライダー内の画像を60vwにしてレスポンシブ化*/
+    height:auto;
+    margin-bottom: 20px;
+    margin-top: 559px;
+}
+.slider {/*横幅94%で左右に余白を持たせて中央寄せ*/
+    width:94%;
+    margin-top: 170px;
+}
+@media screen and (max-width:480px){
+    .slider{
+        margin-top: -270px;
+    }
+}
+
+
+.slider img {
+    width:30vw;/*スライダー内の画像を60vwにしてレスポンシブ化*/
+    height:auto;
+    margin-bottom: 20px;
+    margin-top: 0px;
+}
+@media screen and (max-width:480px){
+    .slider img{
+        width: 90vw; /* 画像の幅を調整 */
+    margin-top: 967px; /* 上マージンをリセット */
+    margin-bottom: 10px; /* 下マージンを調整 */
+    }
+}
+
+.slider h4, .slider p{
+    width: 30vw;
+    margin-bottom: 20px;
+}
+@media screen and (max-width:480px){
+    .slider h4, .slider p{
+        width: 90vw;
+        margin-bottom: 20px;
+        margin-left: 121px;
+}
+}
+
+
+.slider .slick-slide {
+	transform: scale(0.5);/*左右の画像のサイズを50%に*/
+	transition: all .5s;/*拡大や透過のアニメーションを0.5秒で行う*/
+	opacity: 0.5;/*透過50%*/
+}
+
+.slider .slick-slide.slick-center{
+	transform: scale(1);/*中央の画像のサイズだけ等倍に*/
+	opacity: 1;/*透過なし*/
+}
+
+
+/*矢印の設定*/
+
+/*戻る、次へ矢印の位置*/
+.slick-prev, 
+.slick-next {
+    position: absolute;/*絶対配置にする*/
+    top: 42%;
+    cursor: pointer;/*マウスカーソルを指マークに*/
+    outline: none;/*クリックをしたら出てくる枠線を消す*/
+    border-top: 2px solid #666;/*矢印の色*/
+    border-right: 2px solid #666;/*矢印の色*/
+    height: 15px;
+    width: 15px;
+    z-index: 100; 
+}
+
+.slick-prev {/*戻る矢印の位置と形状*/
+    left: 30%;
+    transform: rotate(-135deg);
+}
+
+.slick-next {/*次へ矢印の位置と形状*/
+    right: 30%;
+    transform: rotate(45deg);
+}
+
+/*ドットナビゲーションの設定*/
+
+.slick-dots {
+    text-align:center;
+	margin:20px 0 0 0;
+}
+
+.slick-dots li {
+    display:inline-block;
+	margin:0 5px;
+}
+
+.slick-dots button {
+    color: transparent;
+    outline: none;
+    width:8px;/*ドットボタンのサイズ*/
+    height:8px;/*ドットボタンのサイズ*/
+    display:block;
+    border-radius:50%;
+    background:#ccc;/*ドットボタンの色*/
+}
+
+.slick-dots .slick-active button{
+    background:#333;/*ドットボタンの現在地表示の色*/
+}
+
+/* #section-slider3{
+    background-color: white;
+    width: 300px;
+    height: 600px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+} */
+
+
+.introduce1{
+    color: white;
+    text-align: center;
+    font-family: "Kaisei HarunoUmi", serif;
+    font-weight: 500px;
+    font-style: normal;
+    font-size: 28qpx;
+}
+
+.slider h4, .slider p{
+    width: 30vw;
+    margin-bottom: 20px;
+}
+
+.slider .slick-slide {
+    /* height: 400px;  ここ変更 */
+	transform: scale(0.5);/*左右の画像のサイズを50%に*/
+	transition: all .5s;/*拡大や透過のアニメーションを0.5秒で行う*/
+	opacity: 0.5;/*透過50%*/
+}
+@media screen and (max-width:480px){
+    .slider .slick-slider{
+        height: 400px;
+    }
+}
+
+
+.slider .slick-slide.slick-center{
+	transform: scale(1);/*中央の画像のサイズだけ等倍に*/
+	opacity: 1;/*透過なし*/
+}
+
+.slider_contents{
+
+}
+
+
+/*矢印の設定*/
+
+/*戻る、次へ矢印の位置*/
+.slick-prev, 
+.slick-next {
+    position: absolute;/*絶対配置にする*/
+    top: 42%;
+    cursor: pointer;/*マウスカーソルを指マークに*/
+    outline: none;/*クリックをしたら出てくる枠線を消す*/
+    border-top: 2px solid #666;/*矢印の色*/
+    border-right: 2px solid #666;/*矢印の色*/
+    height: 15px;
+    width: 15px;
+    z-index: 100; 
+}
+
+.slick-prev {/*戻る矢印の位置と形状*/
+    left: 30%;
+    transform: rotate(-135deg);
+}
+
+.slick-next {/*次へ矢印の位置と形状*/
+    right: 30%;
+    transform: rotate(45deg);
+}
+
+/*ドットナビゲーションの設定*/
+
+.slick-dots {
+    text-align:center;
+	margin:20px 0 0 0;
+}
+
+.slick-dots li {
+    display:inline-block;
+	margin:0 5px;
+}
+
+.slick-dots button {
+    color: transparent;
+    outline: none;
+    width:8px;/*ドットボタンのサイズ*/
+    height:8px;/*ドットボタンのサイズ*/
+    display:block;
+    border-radius:50%;
+    background:#ccc;/*ドットボタンの色*/
+}
+
+.slick-dots .slick-active button{
+    background:#333;/*ドットボタンの現在地表示の色*/
+}
+
+/* #section-slider3{
+    background-color: white;
+    width: 300px;
+    height: 600px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+} */
+
+
+.introduce1{
+    color: white;
+    text-align: center;
+    font-family: "Kaisei HarunoUmi", serif;
+    font-weight: 500px;
+    font-style: normal;
+    font-size: 28qpx;
+}
+
+.introduce2{
+    color: white;
+    text-align: left;
+    font-family: "Kaisei HarunoUmi", serif;
+    font-weight: 500px;
+    font-style: normal;
+    line-height: 1.9;
+}
+
+
+/* ======================== */
+/*          フッター         */
+/* ======================== */
+
+.footer{
+    background-color: #272525;
+    width: 100%;
+    height: 20vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-comment{
+    color: white;
+}
